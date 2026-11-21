@@ -1,0 +1,165 @@
+{
+  "template": {
+    "name": "autoparts_ecommerce_landing",
+    "type": "web_landing_page",
+    "canvas": { "width": 1000, "height": 1880, "unit": "px", "orientation": "vertical", "theme": "dark" },
+    "palette": {
+      "background": "#000000",
+      "surface_dark": "#111111",
+      "primary_red": "#E8192C",
+      "dark_red": "#9E1220",
+      "white": "#FFFFFF",
+      "text_muted": "#B5B5B5",
+      "star_yellow": "#F5B400",
+      "badge_yellow": "#F2C230",
+      "card_white": "#FFFFFF"
+    },
+    "typography": {
+      "hero_title": { "family": "Sans-serif extra bold (tipo Poppins/Montserrat)", "weight": 800, "size": 72 },
+      "section_title": { "family": "Sans-serif regular", "weight": 400, "size": 26 },
+      "product_title": { "family": "Sans-serif regular", "weight": 400, "size": 17 },
+      "price": { "family": "Sans-serif regular", "size": 14 },
+      "small_label": { "family": "Sans-serif", "size": 11 }
+    },
+    "sections": [
+      {
+        "id": "navbar",
+        "type": "navigation",
+        "bounds": { "x": 0, "y": 0, "w": 1000, "h": 60 },
+        "background": "#111111",
+        "items": [
+          { "label": "Home", "active": true, "color": "#E8192C" },
+          { "label": "Shop" },
+          { "label": "Gallery" },
+          { "label": "Shortcode" },
+          { "label": "News" },
+          { "label": "Pages" },
+          { "label": "Outr Store" },
+          { "label": "Buy Car", "separator_before": { "color": "#E8192C", "style": "vertical_line" } }
+        ],
+        "text_color": "#FFFFFF"
+      },
+      {
+        "id": "category_dropdown",
+        "type": "sidebar_menu",
+        "bounds": { "x": 56, "y": 22, "w": 148, "h": 200 },
+        "background": "#FFFFFF",
+        "header": {
+          "background": "#E8192C",
+          "icon": "hamburger",
+          "label": "ALL CATAGORIES",
+          "text_color": "#FFFFFF"
+        },
+        "items": [
+          { "label": "Pistons liners", "arrow": true },
+          { "label": "Service kits", "arrow": true },
+          { "label": "Start valves", "arrow": true },
+          { "label": "Ballet Flats", "arrow": true },
+          { "label": "Door handles", "arrow": false },
+          { "label": "Cylinder heads", "arrow": false },
+          { "label": "Adapters", "arrow": false },
+          { "label": "Engine oil", "arrow": false },
+          { "label": "More", "arrow": true }
+        ],
+        "item_text_color": "#666666",
+        "divider": "#E5E5E5"
+      },
+      {
+        "id": "hero_banner",
+        "type": "hero",
+        "bounds": { "x": 0, "y": 70, "w": 1000, "h": 515 },
+        "background": {
+          "color": "#000000",
+          "image": "vertiendo_aceite_en_motor",
+          "image_position": { "x": 420, "y": 70, "w": 580, "h": 515 },
+          "overlay_shape": {
+            "type": "chevron_arrow",
+            "colors": ["#E8192C", "#9E1220"],
+            "direction": "right"
+          }
+        },
+        "elements": [
+          {
+            "type": "text",
+            "slot": "hero_eyebrow",
+            "content": "B... ext ap... t!",
+            "note": "Texto parcialmente tapado por el dropdown; reemplazar",
+            "position": { "x": 34, "y": 95 },
+            "color": "#FFFFFF",
+            "size": 26
+          },
+          { "type": "text", "slot": "hero_highlight", "content": "15% OFF", "color": "#E8192C", "size": 80, "weight": 800, "position": { "x": 25, "y": 230 } },
+          { "type": "text", "slot": "hero_title", "content": "Oil Change Packages", "color": "#FFFFFF", "size": 64, "weight": 800, "position": { "x": 25, "y": 315 } },
+          { "type": "text", "slot": "hero_note", "content": "See in shop for details.", "color": "#FFFFFF", "size": 20, "position": { "x": 25, "y": 452 } },
+          { "type": "logo", "slot": "partner_logo_1", "content": "EUROMECHANIC", "position": { "x": 35, "y": 510, "w": 240, "h": 55 } },
+          { "type": "logo", "slot": "partner_logo_2", "content": "Castrol Engine Warranty", "shape": "circle_badge", "position": { "x": 295, "y": 490, "w": 85, "h": 90 } }
+        ]
+      },
+      {
+        "id": "deal_of_the_day",
+        "type": "product_showcase",
+        "bounds": { "x": 42, "y": 650, "w": 916, "h": 415 },
+        "border": { "color": "#E8192C", "width": 1 },
+        "header": {
+          "title": "Deal Of The Day",
+          "title_color": "#FFFFFF",
+          "countdown": { "label": "END IN:", "value": "1234D:10H 20M 255", "background": "#E8192C", "text_color": "#FFFFFF" },
+          "button": { "label": "Show All", "background": "#E8192C", "text_color": "#FFFFFF" }
+        },
+        "columns": 4,
+        "card_style": {
+          "layout": "rating_title_price_image_stock",
+          "image_box": { "border": "#FFFFFF", "w": 172, "h": 168, "nav_arrows": { "color": "#E8192C", "shape": "circle" } },
+          "add_to_cart": { "label": "Add To Cart", "background": "#E8192C", "text_color": "#FFFFFF", "size": "small" },
+          "checkbox": { "border": "#E8192C" },
+          "stock_bar": { "filled_color": "#E8192C", "empty_color": "#FFFFFF", "labels": ["Available", "Sold"] }
+        },
+        "cards": [
+          { "title": "Wheel Hub Bearing", "rating": 5, "price": "$450", "old_price": "$550", "image_slot": "deal_1_image", "available": 250, "sold": 150 },
+          { "title": "Car Wheel", "rating": 2, "price": "$350", "old_price": "$450", "image_slot": "deal_2_image", "available": 310, "sold": 160 },
+          { "title": "Car Air Filter", "rating": 3, "price": "$350", "old_price": "$450", "image_slot": "deal_3_image", "available": 191, "sold": 120 },
+          { "title": "Car Disk Brake", "rating": 4, "price": "$350", "old_price": "$450", "image_slot": "deal_4_image", "available": 430, "sold": 161 }
+        ]
+      },
+      {
+        "id": "promo_banners",
+        "type": "banner_row",
+        "bounds": { "x": 42, "y": 1135, "w": 916, "h": 207 },
+        "columns": 3,
+        "gap": 32,
+        "banners": [
+          { "eyebrow": "NEW ARRIVALS", "eyebrow_color": "#F2C230", "title": "Wheels & Tires", "cta": "SHOP NOW >", "image_slot": "banner_1_image", "bounds": { "x": 42, "y": 1135, "w": 284, "h": 207 } },
+          { "eyebrow": "WINTER SALE", "eyebrow_color": "#F2C230", "title": "Interior 3-Silicon Touch", "cta": "SHOP NOW >", "image_slot": "banner_2_image", "bounds": { "x": 358, "y": 1135, "w": 284, "h": 207 } },
+          { "eyebrow": "30% Discount", "eyebrow_color": "#F2C230", "title": "3D Headlight", "cta": "SHOP NOW >", "image_slot": "banner_3_image", "bounds": { "x": 674, "y": 1135, "w": 284, "h": 207 } }
+        ],
+        "image_overlay": "dark_gradient"
+      },
+      {
+        "id": "category_products",
+        "type": "sidebar_plus_grid",
+        "bounds": { "x": 42, "y": 1411, "w": 916, "h": 243 },
+        "sidebar": {
+          "bounds": { "x": 42, "y": 1411, "w": 163, "h": 243 },
+          "background": "#FFFFFF",
+          "header": { "icon": "wheel", "label": "Tires & Wheels", "icon_color": "#E8192C" },
+          "items": [
+            { "label": "Tires & Wheels", "active": true, "color": "#E8192C" },
+            { "label": "Bumpers" },
+            { "label": "Break Calipers" },
+            { "label": "Cylinder Heads" },
+            { "label": "Door Handles" }
+          ],
+          "button": { "label": "Show All", "icon": "arrow_up_right", "style": "outline", "border": "#E8192C" }
+        },
+        "grid": {
+          "columns": 4,
+          "border": "#E8192C",
+          "card_style": {
+            "badge": { "label": "NEW", "background": "#F2C230", "position": "top_right" },
+            "layout": "image_rating_price_cart",
+            "add_to_cart": { "label": "Add To Cart", "background": "#E8192C", "text_color": "#FFFFFF" },
+            "checkbox": { "border": "#E8192C" }
+          },
+          "cards": [
+            { "image_slot": "cat_1_image", "rating": 5, "price": "$450", "old_price": "$550" },
+            { "image_slot": "cat_2_image", "rating": 5,
